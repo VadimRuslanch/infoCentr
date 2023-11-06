@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body class="page">
+
+  <main class="main">
+
+    <div class="main__decoration">
+    </div>
+    <div class="main__decoration">
+    </div>
+    <div class="main__decoration">
+    </div>
+    <div class="main__decoration">
+    </div>
+
+    <div class="auth">
+
+      <h1 class="auth__title">Введите данные</h1>
+
+      <form class="auth__form" novalidate>
+
+        <div class="auth__error-block">
+          <span class="auth__error"></span>
+        </div>
+
+        <div class="auth__field">
+
+          <label class="auth__icon auth__icon_name"></label>
+
+          <input class="auth__input" placeholder="Имя" type="text" name="name" minlength="2" maxlength="35" required>
+
+        </div>
+
+        <div class="auth__field">
+
+          <label class="auth__icon auth__icon_email"></label>
+
+          <input class="auth__input" placeholder="Email" type="email" name="email" minlength="2" maxlength="35"
+            required>
+
+        </div>
+
+        <div class="auth__field">
+
+          <label class="auth__icon auth__icon_tel"></label>
+
+          <input class="auth__input" id="phoneInput" name="phone" placeholder="+7 (000) 000 00 00" required>
+        </div>
+
+
+
+        <button class="auth__button auth__button-inactive" disabled>Отправить</button>
+
+      </form>
+
+    </div>
+
+    <div class="preloader">
+      <span class="preloader__icon"></span>
+    </div>
+
+  </main>
+</body>
+
+</html>

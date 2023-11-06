@@ -1,0 +1,15 @@
+{
+    "name": "vadim/backend",
+    "autoload": {
+        "psr-4": {
+            "Vadim\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VadimRuslanch",
+            "email": "Merzlyy.Pes@yandex.ru"
+        }
+    ],
+    "require": {}
+}

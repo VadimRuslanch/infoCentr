@@ -1,0 +1,9 @@
+@import url(./normalize.css);
+
+@import url(./block/page.css);
+
+@import url(./block/main.css);
+
+@import url(./block/auth.css);
+
+@import url(./block/preloader.css);
