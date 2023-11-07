@@ -23,7 +23,6 @@ const submit = new Submit({
         toggleLoader(true);
         ApiSubmit.submit(userData)
             .then(res => {
-                console.log(1);
                 response(res.message, true);
             })
             .catch(err => {
