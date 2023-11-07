@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit;
 }
 
+$nameTable = "OriginTable";
+
 $mysqli = connectionDB();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -30,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     $validationErrors = validate($name, $email, $phone);
-    $repeatErrors = repeatCheck($mysqli, $name, $email, $phone);
+    $repeatErrors = repeatCheck($mysqli, $name, $email, $phone, $nameTable);
 
     if (empty($validationErrors) && empty($repeatErrors)) {
-        submit($mysqli, $name, $email, $phone);
+        submit($mysqli, $name, $email, $phone, $nameTable);
     } else {
         response(400, implode("Некорректные данные ", $validationErrors ? $validationErrors : $repeatErrors));
     };

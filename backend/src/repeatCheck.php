@@ -1,12 +1,12 @@
 <?php
-function repeatCheck($mysqli, $name, $email, $phone)
+function repeatCheck($mysqli, $name, $email, $phone, $nameTable)
 {
     $errors = [];
 
     $queryReplay = "SELECT *
-                    FROM UserInfo
+                    FROM $nameTable
                     WHERE name = '$name' AND email = '$email' AND phone = '$phone'";
-    $queryData = "SELECT date FROM UserInfo WHERE date < DATE_ADD(NOW(), INTERVAL 5 MINUTE)";
+    $queryData = "SELECT date FROM $nameTable WHERE date < DATE_ADD(NOW(), INTERVAL 5 MINUTE)";
 
     $resReplay = $mysqli->query($queryReplay);
     $resData = $mysqli->query($queryData);

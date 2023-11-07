@@ -19,12 +19,12 @@ function connectionDB()
 
     // Блок создания таблицы, если ее нет.
 
-    // $insertQuery ="CREATE TABLE A (
+    // $insertQuery ="CREATE TABLE $nameTable (
     //     id INT AUTO_INCREMENT PRIMARY KEY,
     //     name VARCHAR(75),
     //     email VARCHAR(75),
     //     phone VARCHAR(20),
-    //     registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    //     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     // )";
     // if ($mysqli->query($insertQuery)) {
     //     response(200, "Таблица успешно создана");
